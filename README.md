@@ -1,4 +1,4 @@
-my-exercsim
+my-exercism
 ===========
 
-My exercsim.io exercises
+My exercism.io exercises
