@@ -16,7 +16,9 @@
 
 (defn response-for
   [message]
-  (if (silent? message)         "Fine, be that way."
-      (if (shouting? message)   "Woah, chill out!"
-          (if (asking? message) "Sure."
-                                "Whatever."))))
+  (cond
+   (silent? message)   "Fine, be that way."
+   (shouting? message) "Woah, chill out!"
+   (asking? message)   "Sure."
+   :else               "Whatever."
+   ))
