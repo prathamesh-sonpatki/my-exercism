@@ -7,7 +7,7 @@
 
 (defn asking?
   [message]
-  (.endsWith message "?"))
+  (= (last message) \?))
 
 (defn silent?
   [message]
