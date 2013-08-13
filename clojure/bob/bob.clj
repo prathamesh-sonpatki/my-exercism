@@ -1,12 +1,12 @@
 (ns bob)
 
-(defn shouting? [message]
+(defn- shouting? [message]
   (= (clojure.string/upper-case message) message))
 
-(defn asking? [message]
+(defn- asking? [message]
   (= (last message) \?))
 
-(defn silent? [message]
+(defn- silent? [message]
   (clojure.string/blank? message))
 
 (defn response-for [message]
