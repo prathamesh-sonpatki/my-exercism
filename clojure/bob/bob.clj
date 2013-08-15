@@ -1,13 +1,14 @@
-(ns bob)
+(ns bob
+  (:use [clojure.string :only [blank? upper-case]] ))
 
 (defn- shouting? [message]
-  (= (clojure.string/upper-case message) message))
+  (= (upper-case message) message))
 
 (defn- asking? [message]
   (= (last message) \?))
 
 (defn- silent? [message]
-  (clojure.string/blank? message))
+  (blank? message))
 
 (defn response-for [message]
   (cond
