@@ -17,7 +17,7 @@ class Bob
     end
 
     def question?(message)
-      message[-1] == "?"
+      message.end_with?("?")
     end
 
 end
