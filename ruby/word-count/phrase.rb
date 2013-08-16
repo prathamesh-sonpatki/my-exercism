@@ -11,7 +11,7 @@ class Phrase
     word_count_hash = Hash.new(0)
     @word.split(/[ ,]/).
       reject { |s| s == "" }.
-      each { |w| word_count_hash[w]+= 1 }
+      each { |w| word_count_hash[w] += 1 }
     word_count_hash
   end
 
