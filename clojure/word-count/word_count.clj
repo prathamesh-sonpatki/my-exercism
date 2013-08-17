@@ -1,7 +1,5 @@
 (ns phrase (:use [clojure.string :as str]))
 
-(defn- downcased-phrase [phrase] (-> phrase str/lower-case ))
+(defn- normalize-words [phrase] (->> phrase (re-seq #"\w+")))
 
-(defn- normalize-words [phrase] (->> (downcased-phrase phrase) (re-seq #"\w+")))
-
-(defn word-count [phrase] (->> phrase normalize-words frequencies ))
+(defn word-count [phrase] (->> phrase str/lower-case normalize-words frequencies))
