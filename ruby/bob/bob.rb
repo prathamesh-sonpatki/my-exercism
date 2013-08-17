@@ -8,16 +8,16 @@ class Bob
 
   private
 
-    def blank?(message)
-      message.to_s.strip.empty?
-    end
+  def blank?(message)
+    message.to_s.strip.empty?
+  end
 
-    def shouting?(message)
-      message.upcase == message
-    end
+  def shouting?(message)
+    message.upcase == message
+  end
 
-    def question?(message)
-      message.end_with?("?")
-    end
+  def question?(message)
+    message.end_with?("?")
+  end
 
 end
