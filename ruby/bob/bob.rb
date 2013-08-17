@@ -9,7 +9,7 @@ class Bob
   private
 
     def blank?(message)
-      message == "" || message.nil?
+      message.to_s.strip.empty?
     end
 
     def shouting?(message)

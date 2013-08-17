@@ -49,6 +49,12 @@ begin
     def test_more_silence
       assert_equal 'Fine. Be that way.', teenager.hey(nil)
     end
+    
+    # My tests based on nits
+    
+    def test_more_and_more_silence
+      assert_equal 'Fine. Be that way.', teenager.hey('                    ')
+    end
   end
 
 rescue LoadError => e
