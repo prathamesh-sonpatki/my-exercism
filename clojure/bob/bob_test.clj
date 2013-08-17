@@ -36,4 +36,8 @@
 
   (is (= "Fine, be that way." (bob/response-for ""))))
 
+(deftest responds-to-prolonged-silence
+
+  (is (= "Fine, be that way." (bob/response-for "   "))))
+
 (run-tests)
