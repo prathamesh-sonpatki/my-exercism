@@ -12,6 +12,6 @@ class Anagram
   private
 
   def sort_word(word)
-    word.chars.sort.join
+    word.chars.sort
   end
 end
