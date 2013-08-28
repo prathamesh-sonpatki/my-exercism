@@ -5,6 +5,6 @@
 (defn anagrams-for [word, list]
   (filter (fn [w] (= (sort-word w) (sort-word word))) (remove-identical-words word list)))
 
-(defn- sort-word [word] (-> (sort word) clojure.string/join))
+(defn- sort-word [word] (sort word))
 
 (defn- remove-identical-words [word, list] (remove (fn [w] (= w word)) list))
