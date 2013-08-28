@@ -5,6 +5,8 @@ class Anagram
 
   def match(candidates)
     candidates.
+      map(&:downcase).
+      map(&:strip).
       reject {|c| c == @word }.
       select { |w| sort_word(w) == sort_word(@word) }
   end
