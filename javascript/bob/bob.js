@@ -1,6 +1,6 @@
 var Bob = function () {
     Bob.prototype.hey = function(message) {
-        if (message === '')
+        if (message.trim() === '')
             return 'Fine. Be that way!';
         if (message.toUpperCase() === message)
             return 'Woah, chill out!';
