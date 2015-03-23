@@ -3,7 +3,7 @@ defmodule Teenager do
     cond do
       question?(input) ->
         "Sure."
-      quite?(input) ->
+      quiet?(input) ->
         "Fine. Be that way!"
       shouting?(input)  ->
         "Whoa, chill out!"
@@ -13,10 +13,10 @@ defmodule Teenager do
   end
 
   def question?(input) do
-    String.at(input, -1) == "?"
+    String.ends_with?(input, "?")
   end
 
-  def quite?(input) do
+  def quiet?(input) do
     String.strip(input) == ""
   end
 
