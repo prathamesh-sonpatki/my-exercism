@@ -12,15 +12,15 @@ defmodule Teenager do
     end
   end
 
-  def question?(input) do
+  defp question?(input) do
     String.ends_with?(input, "?")
   end
 
-  def quiet?(input) do
+  defp quiet?(input) do
     String.strip(input) == ""
   end
 
-  def shouting?(input) do
+  defp shouting?(input) do
     String.match?(input, ~r/\pL/) && String.upcase(input) == input
   end
 end
